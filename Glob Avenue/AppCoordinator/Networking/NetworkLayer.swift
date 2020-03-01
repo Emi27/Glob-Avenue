@@ -152,12 +152,26 @@ private extension NetworkLayer {
         guard var request = try? URLRequest(url: url, method: method, headers: headers) else {
             fatalError("Could not create request from URL")
         }
+        
+        let param = (value?.value)!
+        let postString = self.getPostString(params: param)
+        request.httpBody = postString.data(using: .utf8)
 
-        do {
-            try request.httpBody = value?.asParameterData()
+        /*do {
+            
+            try request.httpBody = value.data(using: .utf8)
         } catch {
             fatalError(error.localizedDescription)
-        }
+        }*/
         return request
+    }
+    
+    func getPostString(params:[String: Any]) -> String {
+        var data = [String]()
+        for(key, value) in params
+        {
+            data.append(key + "=\(value)")
+        }
+        return data.map { String($0) }.joined(separator: "&")
     }
 }

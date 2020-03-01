@@ -29,7 +29,7 @@ class LoginViewModel: LoginProtocols {
     }
 
     func showForgetPassword() {
-        
+        coordinator.showForgotPassword()
     }
 
     func loginPressed() {

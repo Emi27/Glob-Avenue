@@ -10,6 +10,7 @@ import Foundation
 
 public protocol ParameterConvertible {
     func asParameterData() throws -> Data
+    var value: [String: Any] { get }
 }
 
 public protocol GlobCodable: Codable, ParameterConvertible {
@@ -22,6 +23,10 @@ public extension GlobCodable {
         encoder.dateEncodingStrategy = .iso8601
         let data = try encoder.encode(self)
         return data
+    }
+
+    var value: [String : Any] {
+        return [:]
     }
 }
 

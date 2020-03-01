@@ -18,4 +18,6 @@ protocol MainSectionCoordinator {
     func doSignup<T: Decodable>(containerType: T.Type, values: ParameterConvertible, completion: @escaping Completion<T>)
 
     func showProfessionalSignup()
+    
+    func showForgotPassword()
 }

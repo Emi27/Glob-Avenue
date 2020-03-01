@@ -34,3 +34,11 @@ extension DefaultTabCoordinator {
         api.request(containerType: containerType, method: .post, values: values, path: "registerUser", completion: completion)
     }
 }
+
+extension DefaultTabCoordinator {
+    func showForgotPassword() {
+        let viewModel = ForgotPasswordViewModel(coordinator: self)
+        let controller = ForgotPasswordViewController(viewModel: viewModel)
+        displayContent(controller)
+    }
+}

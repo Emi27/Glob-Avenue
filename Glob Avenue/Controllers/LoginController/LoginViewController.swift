@@ -84,9 +84,9 @@ class LoginViewController: UIViewController {
         view.backgroundColor = .white
         addImageView()
         addFields()
+        addSignUpButton()
         addSubmitButton()
         addForgotPassword()
-        addSignUpButton()
     }
 
     private func addImageView() {
@@ -125,7 +125,7 @@ class LoginViewController: UIViewController {
             $0.left.equalToSuperview().offset(30)
             $0.right.equalToSuperview().offset(-30)
             $0.height.equalTo(50)
-            $0.top.equalTo(passwordField.snp.bottom).offset(50)
+            $0.bottom.equalTo(signUpButton.snp.top).offset(-20)
         }
     }
     
@@ -137,6 +137,7 @@ class LoginViewController: UIViewController {
             $0.top.equalTo(passwordField.snp.bottom).offset(8)
             $0.width.equalTo(150)
         }
+        forgotPasswordButton.addTarget(self, action: #selector(showForgotPassword), for: .touchUpInside)
     }
 
     private
@@ -154,6 +155,11 @@ class LoginViewController: UIViewController {
     @objc
     func showSignup() {
         viewModel.showSignup()
+    }
+    
+    @objc
+    func showForgotPassword() {
+        viewModel.showForgetPassword()
     }
 }
 

@@ -33,6 +33,8 @@
 		A5A7D480240A4F5B002A86C4 /* Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A7D47F240A4F5B002A86C4 /* Parameters.swift */; };
 		A5A7D482240A52A9002A86C4 /* GlobError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A7D481240A52A9002A86C4 /* GlobError.swift */; };
 		A5A7D486240A5662002A86C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A7D485240A5662002A86C4 /* User.swift */; };
+		A5AA1AAD240C0E0F007A879F /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA1AAC240C0E0F007A879F /* ForgotPasswordViewController.swift */; };
+		A5AA1AAF240C0E1B007A879F /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA1AAE240C0E1B007A879F /* ForgotPasswordViewModel.swift */; };
 		A5C4E42423F81193005A7FBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C4E42323F81193005A7FBF /* AppDelegate.swift */; };
 		A5C4E42B23F81193005A7FBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C4E42923F81193005A7FBF /* Main.storyboard */; };
 		A5C4E42D23F81196005A7FBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5C4E42C23F81196005A7FBF /* Assets.xcassets */; };
@@ -70,6 +72,8 @@
 		A5A7D47F240A4F5B002A86C4 /* Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameters.swift; sourceTree = "<group>"; };
 		A5A7D481240A52A9002A86C4 /* GlobError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobError.swift; sourceTree = "<group>"; };
 		A5A7D485240A5662002A86C4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A5AA1AAC240C0E0F007A879F /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		A5AA1AAE240C0E1B007A879F /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		A5C4E42023F81193005A7FBF /* Glob Avenue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Glob Avenue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C4E42323F81193005A7FBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5C4E42A23F81193005A7FBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -194,6 +198,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A5AA1AAB240C0DF4007A879F /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				A5AA1AAC240C0E0F007A879F /* ForgotPasswordViewController.swift */,
+				A5AA1AAE240C0E1B007A879F /* ForgotPasswordViewModel.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
 		A5C4E41723F81193005A7FBF = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +257,7 @@
 		A5C4E43A23F8135C005A7FBF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A5AA1AAB240C0DF4007A879F /* ForgotPassword */,
 				A526D53B240843CB0066BFD6 /* SignupProfessionalController */,
 				A50C1DF5240429AA0096BA6C /* SignupViewController */,
 				A5C4E43B23F81366005A7FBF /* LoginController */,
@@ -402,10 +416,12 @@
 				A5A7D486240A5662002A86C4 /* User.swift in Sources */,
 				A50C1DF7240429CB0096BA6C /* SignupViewController.swift in Sources */,
 				A54DB0DF24082EDB002F9081 /* TextStyleConfiguring.swift in Sources */,
+				A5AA1AAD240C0E0F007A879F /* ForgotPasswordViewController.swift in Sources */,
 				A50C1E05240435450096BA6C /* LoginViewModel.swift in Sources */,
 				A526D538240834330066BFD6 /* SignupExtension.swift in Sources */,
 				A50C1E012404343B0096BA6C /* AppNavigator.swift in Sources */,
 				A526D53D240843F30066BFD6 /* SignupProfessionalController.swift in Sources */,
+				A5AA1AAF240C0E1B007A879F /* ForgotPasswordViewModel.swift in Sources */,
 				A54DB0E124082F3C002F9081 /* UIFontExtensions.swift in Sources */,
 				A5C4E43D23F81380005A7FBF /* LoginViewController.swift in Sources */,
 				A5A7D47E240A4B79002A86C4 /* NetworkLayer.swift in Sources */,
