@@ -13,9 +13,10 @@ protocol MainSectionCoordinator {
 
     // MARK: Auth
     func showLogin()
+    func doLogin<T: Decodable>(containerType: T.Type, values: ParameterConvertible, completion: @escaping Completion<APIResponse<T>>)
 
     func showSignup()
-    func doSignup<T: Decodable>(containerType: T.Type, values: ParameterConvertible, completion: @escaping Completion<T>)
+    func doSignup<T: Decodable>(containerType: T.Type, values: ParameterConvertible, completion: @escaping Completion<APIResponse<T>>)
 
     func showProfessionalSignup()
     

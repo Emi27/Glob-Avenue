@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A54CC15E29635117D6CF079 /* Pods_Glob_Avenue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D7932BA560B6E691E1B61D /* Pods_Glob_Avenue.framework */; };
+		A50A97B1240EBE25001057EB /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50A97B0240EBE25001057EB /* APIResponse.swift */; };
 		A50C1DF7240429CB0096BA6C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C1DF6240429CB0096BA6C /* SignupViewController.swift */; };
 		A50C1DF924042A730096BA6C /* AppLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C1DF824042A730096BA6C /* AppLogoView.swift */; };
 		A50C1DFB240431840096BA6C /* DefaultTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C1DFA240431840096BA6C /* DefaultTabCoordinator.swift */; };
@@ -22,6 +23,27 @@
 		A526D53D240843F30066BFD6 /* SignupProfessionalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526D53C240843F30066BFD6 /* SignupProfessionalController.swift */; };
 		A526D53F2408441C0066BFD6 /* SignupProfessionalController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A526D53E2408441C0066BFD6 /* SignupProfessionalController.storyboard */; };
 		A526D541240844A10066BFD6 /* StoryboardRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526D540240844A10066BFD6 /* StoryboardRepresentable.swift */; };
+		A52FD58E24101C4D00561F97 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52FD58D24101C4D00561F97 /* StringExtensions.swift */; };
+		A52FD5902410248000561F97 /* RegParamConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52FD58F2410248000561F97 /* RegParamConvertible.swift */; };
+		A52FD5922410290A00561F97 /* DictionaryExtionsions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52FD5912410290A00561F97 /* DictionaryExtionsions.swift */; };
+		A53636392411681D0096CBE3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53636382411681D0096CBE3 /* UIViewControllerExtensions.swift */; };
+		A536364D24116B230096CBE3 /* NunitoSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A536363C24116B230096CBE3 /* NunitoSans-LightItalic.ttf */; };
+		A536364E24116B230096CBE3 /* NunitoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A536363D24116B230096CBE3 /* NunitoSans-BoldItalic.ttf */; };
+		A536364F24116B230096CBE3 /* NunitoSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A536363E24116B230096CBE3 /* NunitoSans-ExtraLight.ttf */; };
+		A536365024116B230096CBE3 /* NunitoSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A536363F24116B230096CBE3 /* NunitoSans-Light.ttf */; };
+		A536365124116B230096CBE3 /* NunitoSans-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A536364024116B230096CBE3 /* NunitoSans-BlackItalic.ttf */; };
+		A536365224116B230096CBE3 /* LibreBaskerville-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A536364124116B230096CBE3 /* LibreBaskerville-Italic.ttf */; };
+		A536365324116B230096CBE3 /* NunitoSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A536364224116B230096CBE3 /* NunitoSans-ExtraBold.ttf */; };
+		A536365424116B230096CBE3 /* NunitoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A536364324116B230096CBE3 /* NunitoSans-Regular.ttf */; };
+		A536365524116B230096CBE3 /* NunitoSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A536364424116B230096CBE3 /* NunitoSans-SemiBoldItalic.ttf */; };
+		A536365624116B230096CBE3 /* NunitoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A536364524116B230096CBE3 /* NunitoSans-Italic.ttf */; };
+		A536365724116B230096CBE3 /* LibreBaskerville-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A536364624116B230096CBE3 /* LibreBaskerville-Regular.ttf */; };
+		A536365824116B230096CBE3 /* LibreBaskerville-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A536364724116B230096CBE3 /* LibreBaskerville-Bold.ttf */; };
+		A536365924116B230096CBE3 /* NunitoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A536364824116B230096CBE3 /* NunitoSans-Bold.ttf */; };
+		A536365A24116B230096CBE3 /* NunitoSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A536364924116B230096CBE3 /* NunitoSans-SemiBold.ttf */; };
+		A536365B24116B230096CBE3 /* NunitoSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A536364A24116B230096CBE3 /* NunitoSans-Black.ttf */; };
+		A536365C24116B230096CBE3 /* NunitoSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A536364B24116B230096CBE3 /* NunitoSans-ExtraBoldItalic.ttf */; };
+		A536365D24116B230096CBE3 /* NunitoSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A536364C24116B230096CBE3 /* NunitoSans-ExtraLightItalic.ttf */; };
 		A54DB0DF24082EDB002F9081 /* TextStyleConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54DB0DE24082EDB002F9081 /* TextStyleConfiguring.swift */; };
 		A54DB0E124082F3C002F9081 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54DB0E024082F3C002F9081 /* UIFontExtensions.swift */; };
 		A54DE34123FC3802002F9D73 /* globeLogo.gif in Resources */ = {isa = PBXBuildFile; fileRef = A54DE34023FC3802002F9D73 /* globeLogo.gif */; };
@@ -47,6 +69,7 @@
 /* Begin PBXFileReference section */
 		98D7932BA560B6E691E1B61D /* Pods_Glob_Avenue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Glob_Avenue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BA9A5E3702F5E8065E248A /* Pods-Globe Avenue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Globe Avenue.release.xcconfig"; path = "Target Support Files/Pods-Globe Avenue/Pods-Globe Avenue.release.xcconfig"; sourceTree = "<group>"; };
+		A50A97B0240EBE25001057EB /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		A50C1DF6240429CB0096BA6C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A50C1DF824042A730096BA6C /* AppLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogoView.swift; sourceTree = "<group>"; };
 		A50C1DFA240431840096BA6C /* DefaultTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTabCoordinator.swift; sourceTree = "<group>"; };
@@ -61,6 +84,27 @@
 		A526D53C240843F30066BFD6 /* SignupProfessionalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProfessionalController.swift; sourceTree = "<group>"; };
 		A526D53E2408441C0066BFD6 /* SignupProfessionalController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupProfessionalController.storyboard; sourceTree = "<group>"; };
 		A526D540240844A10066BFD6 /* StoryboardRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardRepresentable.swift; sourceTree = "<group>"; };
+		A52FD58D24101C4D00561F97 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		A52FD58F2410248000561F97 /* RegParamConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegParamConvertible.swift; sourceTree = "<group>"; };
+		A52FD5912410290A00561F97 /* DictionaryExtionsions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtionsions.swift; sourceTree = "<group>"; };
+		A53636382411681D0096CBE3 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		A536363C24116B230096CBE3 /* NunitoSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		A536363D24116B230096CBE3 /* NunitoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A536363E24116B230096CBE3 /* NunitoSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		A536363F24116B230096CBE3 /* NunitoSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Light.ttf"; sourceTree = "<group>"; };
+		A536364024116B230096CBE3 /* NunitoSans-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-BlackItalic.ttf"; sourceTree = "<group>"; };
+		A536364124116B230096CBE3 /* LibreBaskerville-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreBaskerville-Italic.ttf"; sourceTree = "<group>"; };
+		A536364224116B230096CBE3 /* NunitoSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A536364324116B230096CBE3 /* NunitoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Regular.ttf"; sourceTree = "<group>"; };
+		A536364424116B230096CBE3 /* NunitoSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		A536364524116B230096CBE3 /* NunitoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Italic.ttf"; sourceTree = "<group>"; };
+		A536364624116B230096CBE3 /* LibreBaskerville-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreBaskerville-Regular.ttf"; sourceTree = "<group>"; };
+		A536364724116B230096CBE3 /* LibreBaskerville-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreBaskerville-Bold.ttf"; sourceTree = "<group>"; };
+		A536364824116B230096CBE3 /* NunitoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Bold.ttf"; sourceTree = "<group>"; };
+		A536364924116B230096CBE3 /* NunitoSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		A536364A24116B230096CBE3 /* NunitoSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Black.ttf"; sourceTree = "<group>"; };
+		A536364B24116B230096CBE3 /* NunitoSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		A536364C24116B230096CBE3 /* NunitoSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		A54DB0DE24082EDB002F9081 /* TextStyleConfiguring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyleConfiguring.swift; sourceTree = "<group>"; };
 		A54DB0E024082F3C002F9081 /* UIFontExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		A54DE34023FC3802002F9D73 /* globeLogo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = globeLogo.gif; sourceTree = "<group>"; };
@@ -125,6 +169,7 @@
 				A50C1DF6240429CB0096BA6C /* SignupViewController.swift */,
 				A526D537240834330066BFD6 /* SignupExtension.swift */,
 				A50C1E082404378B0096BA6C /* SignupViewModel.swift */,
+				A52FD58F2410248000561F97 /* RegParamConvertible.swift */,
 			);
 			path = SignupViewController;
 			sourceTree = "<group>";
@@ -156,6 +201,30 @@
 			path = SignupProfessionalController;
 			sourceTree = "<group>";
 		};
+		A536363B24116B230096CBE3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A536363C24116B230096CBE3 /* NunitoSans-LightItalic.ttf */,
+				A536363D24116B230096CBE3 /* NunitoSans-BoldItalic.ttf */,
+				A536363E24116B230096CBE3 /* NunitoSans-ExtraLight.ttf */,
+				A536363F24116B230096CBE3 /* NunitoSans-Light.ttf */,
+				A536364024116B230096CBE3 /* NunitoSans-BlackItalic.ttf */,
+				A536364124116B230096CBE3 /* LibreBaskerville-Italic.ttf */,
+				A536364224116B230096CBE3 /* NunitoSans-ExtraBold.ttf */,
+				A536364324116B230096CBE3 /* NunitoSans-Regular.ttf */,
+				A536364424116B230096CBE3 /* NunitoSans-SemiBoldItalic.ttf */,
+				A536364524116B230096CBE3 /* NunitoSans-Italic.ttf */,
+				A536364624116B230096CBE3 /* LibreBaskerville-Regular.ttf */,
+				A536364724116B230096CBE3 /* LibreBaskerville-Bold.ttf */,
+				A536364824116B230096CBE3 /* NunitoSans-Bold.ttf */,
+				A536364924116B230096CBE3 /* NunitoSans-SemiBold.ttf */,
+				A536364A24116B230096CBE3 /* NunitoSans-Black.ttf */,
+				A536364B24116B230096CBE3 /* NunitoSans-ExtraBoldItalic.ttf */,
+				A536364C24116B230096CBE3 /* NunitoSans-ExtraLightItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		A54DE33F23FC37FA002F9D73 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +236,7 @@
 		A54DE34223FC3A5E002F9D73 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				A53636382411681D0096CBE3 /* UIViewControllerExtensions.swift */,
 				A54DE34323FC3A8D002F9D73 /* Bundle+Extenstions.swift */,
 				A50C1E06240436A70096BA6C /* Navigation+Extenstions.swift */,
 				A5814FC92406D7EF00E93CB2 /* UIColorExtensions.swift */,
@@ -176,6 +246,8 @@
 				A526D53924083D640066BFD6 /* UIDevice.swift */,
 				A526D540240844A10066BFD6 /* StoryboardRepresentable.swift */,
 				A599381C240983210066F3C2 /* ImagePicker.swift */,
+				A52FD58D24101C4D00561F97 /* StringExtensions.swift */,
+				A52FD5912410290A00561F97 /* DictionaryExtionsions.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -185,6 +257,7 @@
 			children = (
 				A5A7D47D240A4B79002A86C4 /* NetworkLayer.swift */,
 				A5A7D47F240A4F5B002A86C4 /* Parameters.swift */,
+				A50A97B0240EBE25001057EB /* APIResponse.swift */,
 				A5A7D481240A52A9002A86C4 /* GlobError.swift */,
 			);
 			path = Networking;
@@ -228,6 +301,7 @@
 		A5C4E42223F81193005A7FBF /* Glob Avenue */ = {
 			isa = PBXGroup;
 			children = (
+				A536363B24116B230096CBE3 /* Fonts */,
 				A5A7D484240A5657002A86C4 /* Models */,
 				A54DE34223FC3A5E002F9D73 /* Global */,
 				A54DE33F23FC37FA002F9D73 /* Images */,
@@ -351,10 +425,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A536364F24116B230096CBE3 /* NunitoSans-ExtraLight.ttf in Resources */,
+				A536365C24116B230096CBE3 /* NunitoSans-ExtraBoldItalic.ttf in Resources */,
+				A536365D24116B230096CBE3 /* NunitoSans-ExtraLightItalic.ttf in Resources */,
 				A5C4E43023F81196005A7FBF /* LaunchScreen.storyboard in Resources */,
+				A536364D24116B230096CBE3 /* NunitoSans-LightItalic.ttf in Resources */,
+				A536365424116B230096CBE3 /* NunitoSans-Regular.ttf in Resources */,
+				A536365B24116B230096CBE3 /* NunitoSans-Black.ttf in Resources */,
 				A526D53F2408441C0066BFD6 /* SignupProfessionalController.storyboard in Resources */,
+				A536365324116B230096CBE3 /* NunitoSans-ExtraBold.ttf in Resources */,
 				A5C4E42D23F81196005A7FBF /* Assets.xcassets in Resources */,
+				A536365524116B230096CBE3 /* NunitoSans-SemiBoldItalic.ttf in Resources */,
+				A536364E24116B230096CBE3 /* NunitoSans-BoldItalic.ttf in Resources */,
+				A536365A24116B230096CBE3 /* NunitoSans-SemiBold.ttf in Resources */,
+				A536365724116B230096CBE3 /* LibreBaskerville-Regular.ttf in Resources */,
+				A536365024116B230096CBE3 /* NunitoSans-Light.ttf in Resources */,
 				A5C4E42B23F81193005A7FBF /* Main.storyboard in Resources */,
+				A536365224116B230096CBE3 /* LibreBaskerville-Italic.ttf in Resources */,
+				A536365824116B230096CBE3 /* LibreBaskerville-Bold.ttf in Resources */,
+				A536365624116B230096CBE3 /* NunitoSans-Italic.ttf in Resources */,
+				A536365924116B230096CBE3 /* NunitoSans-Bold.ttf in Resources */,
+				A536365124116B230096CBE3 /* NunitoSans-BlackItalic.ttf in Resources */,
 				A54DE34123FC3802002F9D73 /* globeLogo.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,12 +499,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A52FD5902410248000561F97 /* RegParamConvertible.swift in Sources */,
 				A5A7D480240A4F5B002A86C4 /* Parameters.swift in Sources */,
 				A50C1DF924042A730096BA6C /* AppLogoView.swift in Sources */,
 				A526D53A24083D640066BFD6 /* UIDevice.swift in Sources */,
 				A5814FCA2406D7F000E93CB2 /* UIColorExtensions.swift in Sources */,
 				A526D541240844A10066BFD6 /* StoryboardRepresentable.swift in Sources */,
 				A5A7D486240A5662002A86C4 /* User.swift in Sources */,
+				A52FD5922410290A00561F97 /* DictionaryExtionsions.swift in Sources */,
 				A50C1DF7240429CB0096BA6C /* SignupViewController.swift in Sources */,
 				A54DB0DF24082EDB002F9081 /* TextStyleConfiguring.swift in Sources */,
 				A5AA1AAD240C0E0F007A879F /* ForgotPasswordViewController.swift in Sources */,
@@ -424,6 +517,7 @@
 				A5AA1AAF240C0E1B007A879F /* ForgotPasswordViewModel.swift in Sources */,
 				A54DB0E124082F3C002F9081 /* UIFontExtensions.swift in Sources */,
 				A5C4E43D23F81380005A7FBF /* LoginViewController.swift in Sources */,
+				A53636392411681D0096CBE3 /* UIViewControllerExtensions.swift in Sources */,
 				A5A7D47E240A4B79002A86C4 /* NetworkLayer.swift in Sources */,
 				A5A7D482240A52A9002A86C4 /* GlobError.swift in Sources */,
 				A526D5362408329D0066BFD6 /* Margin.swift in Sources */,
@@ -431,6 +525,8 @@
 				A50C1E03240434B20096BA6C /* DefaultTabCoordinator+Auth.swift in Sources */,
 				A50C1E07240436A70096BA6C /* Navigation+Extenstions.swift in Sources */,
 				A599381B24096EE60066F3C2 /* SignupProfessionalViewModel.swift in Sources */,
+				A52FD58E24101C4D00561F97 /* StringExtensions.swift in Sources */,
+				A50A97B1240EBE25001057EB /* APIResponse.swift in Sources */,
 				A50C1E092404378B0096BA6C /* SignupViewModel.swift in Sources */,
 				A54DE34423FC3A8D002F9D73 /* Bundle+Extenstions.swift in Sources */,
 				A5C4E43923F81309005A7FBF /* MainSectionCoordinator.swift in Sources */,

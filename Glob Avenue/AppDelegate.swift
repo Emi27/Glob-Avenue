@@ -8,6 +8,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import SVProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,8 +29,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         IQKeyboardManager.shared.enable = true
         window?.makeKeyAndVisible()
+        setProgressStyle()
         return true
     }
 
+    private func setProgressStyle() {
+        SVProgressHUD.setDefaultStyle(.dark)
+    }
+    
 }
 

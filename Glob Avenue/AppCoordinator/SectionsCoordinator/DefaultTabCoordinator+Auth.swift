@@ -15,11 +15,9 @@ extension DefaultTabCoordinator {
         let loginController = LoginViewController(viewModel: viewModel)
         present(controller: loginController, animated: false, embeddInNav: true, fullScreen: true)
     }
-    
-    func showProfessionalSignup() {
-        let controller = SignupProfessionalController.instance()
-        controller.viewModel = SignupProfessionalViewModel(coordinator: self)
-        displayContent(controller)
+
+    func doLogin<T>(containerType: T.Type, values: ParameterConvertible, completion: @escaping ((Result<APIResponse<T>, Error>) -> Void)) where T : Decodable, T : Encodable {
+        api.request(containerType: containerType, method: .post, values: values, path: "login", completion: completion)
     }
 }
 
@@ -29,8 +27,14 @@ extension DefaultTabCoordinator {
         let controller = SignupViewController(viewModel: viewModel)
         displayContent(controller)
     }
-    
-    func doSignup<T>(containerType: T.Type, values: ParameterConvertible, completion: @escaping (Result<T, Error>) -> Void) where T : Decodable {
+
+    func showProfessionalSignup() {
+        let controller = SignupProfessionalController.instance()
+        controller.viewModel = SignupProfessionalViewModel(coordinator: self)
+        displayContent(controller)
+    }
+
+    func doSignup<T>(containerType: T.Type, values: ParameterConvertible, completion: @escaping Completion<APIResponse<T>>) where T : Decodable {
         api.request(containerType: containerType, method: .post, values: values, path: "registerUser", completion: completion)
     }
 }

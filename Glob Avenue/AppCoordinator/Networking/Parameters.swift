@@ -47,7 +47,7 @@ public class ParamDictionary: ParameterConvertible, ExpressibleByDictionaryLiter
     }
 
     public func asParameterData() throws -> Data {
-        let data = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)
+        let data = try JSONSerialization.data(withJSONObject: value, options: [])
         return data
     }
 }

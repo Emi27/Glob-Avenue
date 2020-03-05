@@ -68,6 +68,7 @@ class SignupViewController: UIViewController {
         textField.placeholder = "User name"
         textField.delegate = self
         textField.isRequired = true
+        textField.addTarget(self, action: #selector(updateUserName(textField:)), for: .editingChanged)
         return textField
     }()
 
@@ -78,6 +79,7 @@ class SignupViewController: UIViewController {
         textField.delegate = self
         textField.isSecureTextEntry = true
         textField.isRequired = true
+        textField.addTarget(self, action: #selector(updatePassword(textField:)), for: .editingChanged)
         return textField
     }()
 
@@ -88,6 +90,7 @@ class SignupViewController: UIViewController {
         textField.delegate = self
         textField.isSecureTextEntry = true
         textField.isRequired = true
+        textField.addTarget(self, action: #selector(updateConfPassword(textField:)), for: .editingChanged)
         return textField
     }()
 
@@ -106,6 +109,7 @@ class SignupViewController: UIViewController {
         textField.delegate = self
         textField.keyboardType = .emailAddress
         textField.isRequired = true
+        textField.addTarget(self, action: #selector(updateEmail(textField:)), for: .editingChanged)
         return textField
     }()
 
@@ -115,7 +119,7 @@ class SignupViewController: UIViewController {
         textField.placeholder = "XXXXXX9876"
         textField.delegate = self
         textField.keyboardType = .phonePad
-        textField.isRequired = true
+        textField.addTarget(self, action: #selector(updateMobile(textField:)), for: .editingChanged)
         return textField
     }()
 
@@ -124,7 +128,7 @@ class SignupViewController: UIViewController {
         textField.title = "Location"
         textField.placeholder = "Paris"
         textField.delegate = self
-        textField.isRequired = true
+        textField.addTarget(self, action: #selector(updateLocation(textField:)), for: .editingChanged)
         return textField
     }()
 
@@ -139,6 +143,7 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        viewModel.delegate = self
         setupElements()
     }
     
@@ -152,11 +157,87 @@ class SignupViewController: UIViewController {
     
     @objc
     func signUp() {
-        viewModel.doSignUp()
+        if checkValidityOfFields() {
+            viewModel.doSignUp()
+        }
     }
 
+    func checkValidityOfFields() -> Bool {
+        resetAllError()
+        var isAllValid = false
+        switch viewModel.validateFields() {
+        case .userName(let message): usernameField.error = message
+        case .password(let message): passwordField.error = message
+        case .confPassword(let message): confirmPasswordField.error = message
+        case .passwordNotMatch(let message):
+            passwordField.error = message
+            confirmPasswordField.error = message
+        case .email(let message): emailField.error = message
+        case .none: isAllValid = true
+        }
+        return isAllValid
+    }
+    
+    func resetAllError() {
+        [usernameField, passwordField, confirmPasswordField, emailField].forEach {
+            $0.error = nil
+        }
+    }
+    
     @objc
     func showProfessionalReg() {
         viewModel.showProfessionalReg()
+    }
+    
+    @objc
+    func updateUserName(textField: HighlightingTextField) {
+        if let text = textField.text {
+            viewModel.userName = text
+        }
+    }
+
+    @objc
+    func updatePassword(textField: HighlightingTextField) {
+        if let text = textField.text {
+            viewModel.password = text
+        }
+    }
+
+    @objc
+    func updateConfPassword(textField: HighlightingTextField) {
+        if let text = textField.text {
+            viewModel.confPassword = text
+        }
+    }
+
+    @objc
+    func updateEmail(textField: HighlightingTextField) {
+        if let text = textField.text {
+            viewModel.email = text
+        }
+    }
+
+    @objc
+    func updateMobile(textField: HighlightingTextField) {
+        if let text = textField.text {
+            viewModel.mobile = text
+        }
+    }
+    
+    @objc
+    func updateLocation(textField: HighlightingTextField) {
+        if let text = textField.text {
+            viewModel.location = text
+        }
+    }
+}
+
+extension SignupViewController: SignupUiDelegate {
+    func showSuccess(message: String) {
+        showSuccessBanner(message: message)
+    }
+
+    func showError(message: String) {
+        showFailBanner(message: message)
     }
 }

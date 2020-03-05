@@ -8,6 +8,8 @@ target 'Glob Avenue' do
   pod 'Kingfisher', '~> 5.13'
   pod 'IQKeyboardManagerSwift'
   pod 'Alamofire'
+  pod 'SVProgressHUD'
+  pod 'NotificationBannerSwift'
   # Pods for Globe Avenue
 
 end

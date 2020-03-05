@@ -13,7 +13,7 @@ public typealias Completion<T> = ((Result<T, Error>) -> Void)
 public typealias ReqMethod = HTTPMethod
 
 protocol NetworkProtocol {
-    func request<T: Decodable>(containerType: T.Type, method: ReqMethod, values: ParameterConvertible?, path: String, completion: @escaping Completion<T>)
+    func request<T: Decodable>(containerType: T.Type, method: ReqMethod, values: ParameterConvertible?, path: String, completion: @escaping Completion<APIResponse<T>>)
 }
 
 class NetworkLayer: NetworkProtocol {
@@ -22,7 +22,7 @@ class NetworkLayer: NetworkProtocol {
     public static var fullDebug = true
     
     lazy private var headers: Alamofire.HTTPHeaders = {
-        return ["Accept": "application/json"]
+        return ["Content-Type": "application/json"]
     }()
     
     private static var urlConfig: URLSessionConfiguration = {
@@ -53,12 +53,21 @@ class NetworkLayer: NetworkProtocol {
         return manager
     }()
     
-    func request<T: Decodable>(containerType: T.Type, method: ReqMethod, values: ParameterConvertible?, path: String, completion: @escaping Completion<T>) {
-        let request = prepareRequest(path: path, method: method, value: values)
-        let dataRequest = NetworkLayer.sessionManager.request(request)
-        dataRequest.responseData { dataResponse in
+    func request<T: Decodable>(containerType: T.Type, method: ReqMethod, values: ParameterConvertible?, path: String, completion: @escaping Completion<APIResponse<T>>) {
+        let dataRequest = createDataRequest(path: path, method: method, value: values)
+        dataRequest?.responseData { dataResponse in
             self.completeRequest(dataResponse, completion: completion)
         }
+    }
+    
+    private func createDataRequest(path: String,
+                                   method: ReqMethod,
+                                   value: ParameterConvertible?) -> DataRequest? {
+        guard let value = value?.value else {
+            return nil
+        }
+        return AF.request(base + path, method: method, parameters: value,
+                          encoding: URLEncoding.default, headers: nil)
     }
     
     private func completeRequest<T: Decodable>(_ dataResponse: AFDataResponse<Data>,
@@ -152,17 +161,11 @@ private extension NetworkLayer {
         guard var request = try? URLRequest(url: url, method: method, headers: headers) else {
             fatalError("Could not create request from URL")
         }
-        
-        let param = (value?.value)!
-        let postString = self.getPostString(params: param)
-        request.httpBody = postString.data(using: .utf8)
-
-        /*do {
-            
-            try request.httpBody = value.data(using: .utf8)
+        do {
+            try request.httpBody = value?.asParameterData()
         } catch {
             fatalError(error.localizedDescription)
-        }*/
+        }
         return request
     }
     

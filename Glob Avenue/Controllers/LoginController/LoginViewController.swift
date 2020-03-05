@@ -29,6 +29,7 @@ class LoginViewController: UIViewController {
         textField.delegate = self
         textField.keyboardType = .emailAddress
         textField.isRequired = true
+        textField.addTarget(self, action: #selector(updateEmail(textField:)), for: .editingChanged)
         return textField
     }()
 
@@ -39,6 +40,7 @@ class LoginViewController: UIViewController {
         textField.delegate = self
         textField.isSecureTextEntry = true
         textField.isRequired = true
+        textField.addTarget(self, action: #selector(updatePassword(textField:)), for: .editingChanged)
         return textField
     }()
 
@@ -127,6 +129,7 @@ class LoginViewController: UIViewController {
             $0.height.equalTo(50)
             $0.bottom.equalTo(signUpButton.snp.top).offset(-20)
         }
+        loginButton.addTarget(self, action: #selector(loginPressed), for: .touchUpInside)
     }
     
     private
@@ -150,6 +153,44 @@ class LoginViewController: UIViewController {
             $0.bottom.equalToSuperview().offset(-40)
         }
         signUpButton.addTarget(self, action: #selector(showSignup), for: .touchUpInside)
+    }
+
+    @objc
+    func updatePassword(textField: HighlightingTextField) {
+        if let text = textField.text {
+            viewModel.password = text
+        }
+    }
+
+    @objc
+    func updateEmail(textField: HighlightingTextField) {
+        if let text = textField.text {
+            viewModel.email = text
+        }
+    }
+
+    func checkValidityOfFields() -> Bool {
+        resetAllError()
+        var isAllValid = false
+        switch viewModel.validateFields() {
+        case .email(let message): usernameField.error = message
+        case .password(let message): passwordField.error = message
+        default: isAllValid = true
+        }
+        return isAllValid
+    }
+    
+    func resetAllError() {
+        [usernameField , passwordField].forEach {
+            $0.error = nil
+        }
+    }
+
+    @objc
+    func loginPressed() {
+        if checkValidityOfFields() {
+            viewModel.loginPressed()
+        }
     }
 
     @objc
