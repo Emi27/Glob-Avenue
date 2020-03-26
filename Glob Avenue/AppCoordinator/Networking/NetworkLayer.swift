@@ -9,11 +9,12 @@
 import UIKit
 import Alamofire
 
-public typealias Completion<T> = ((Result<T, Error>) -> Void)
+public typealias Completion<T> = ((Result<T, GlobError>) -> Void)
 public typealias ReqMethod = HTTPMethod
 
 protocol NetworkProtocol {
     func request<T: Decodable>(containerType: T.Type, method: ReqMethod, values: ParameterConvertible?, path: String, completion: @escaping Completion<APIResponse<T>>)
+    func request<T: Decodable>(containerType: T.Type, values: ParameterConvertible?, path: String, method: ReqMethod, completion: @escaping Completion<T>)
 }
 
 class NetworkLayer: NetworkProtocol {
@@ -52,14 +53,22 @@ class NetworkLayer: NetworkProtocol {
         var manager = Alamofire.Session(configuration: NetworkLayer.backgroundConfig, startRequestsImmediately: true)
         return manager
     }()
-    
+
+    // MARK: Protocol actions
     func request<T: Decodable>(containerType: T.Type, method: ReqMethod, values: ParameterConvertible?, path: String, completion: @escaping Completion<APIResponse<T>>) {
         let dataRequest = createDataRequest(path: path, method: method, value: values)
         dataRequest?.responseData { dataResponse in
             self.completeRequest(dataResponse, completion: completion)
         }
     }
-    
+
+    func request<T: Decodable>(containerType: T.Type, values: ParameterConvertible?, path: String, method: ReqMethod, completion: @escaping Completion<T>) {
+        let dataRequest = createDataRequest(path: path, method: method, value: values)
+        dataRequest?.responseData { dataResponse in
+            self.completeRequest(dataResponse, completion: completion)
+        }
+    }
+
     private func createDataRequest(path: String,
                                    method: ReqMethod,
                                    value: ParameterConvertible?) -> DataRequest? {
@@ -67,7 +76,7 @@ class NetworkLayer: NetworkProtocol {
             return nil
         }
         return AF.request(base + path, method: method, parameters: value,
-                          encoding: URLEncoding.default, headers: nil)
+                          encoding: URLEncoding.httpBody, headers: nil)
     }
     
     private func completeRequest<T: Decodable>(_ dataResponse: AFDataResponse<Data>,
@@ -92,13 +101,13 @@ class NetworkLayer: NetworkProtocol {
                     traceLog("\nfailed to decode, error: " + "\(error)" + error.localizedDescription)
                     let model = String(describing: T.self)
                     let body = String(data: data, encoding: .ascii) ?? "{}"
+                    traceLog("\nbody : " + "\(body)")
                     let url = dataResponse.request?.url?.absoluteString
                     var additional: [String: String] = ["model": model, "body": body]
                     if let url = url {
                         additional["url"] = url
                     }
-                    //errorTracker.recordError(error, withAdditionalUserInfo: additional)
-                    completion(.failure(GlobError(category: .decoding, message: error.localizedDescription)))
+                    completion(.failure(GlobError(message: error.localizedDescription)))
                 }
             } else {
                 do {
@@ -136,12 +145,12 @@ class NetworkLayer: NetworkProtocol {
     
     private func handleDecodingError<T: Decodable>(_ error: Error, completion: @escaping Completion<T>) {
         traceLog("\nfailed error decode, error: " + "\(error)" + error.localizedDescription)
-        completion(.failure(GlobError(category: .decoding, message: error.localizedDescription)))
+        completion(.failure(GlobError(message: error.localizedDescription)))
     }
 
     private func handleNetworkError<T: Decodable>(_ error: Error, completion: @escaping Completion<T>) {
         traceLog("\nnetwork error: \(error)")
-        completion(.failure(GlobError(category: .network, message: error.localizedDescription)))
+        completion(.failure(GlobError(message: error.localizedDescription)))
     }
 }
 

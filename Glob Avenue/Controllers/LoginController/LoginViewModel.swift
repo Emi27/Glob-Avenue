@@ -16,7 +16,7 @@ protocol LoginProtocols {
 }
 
 protocol LoginUiDelegates {
-    func showSuccess(message: String)
+    func onSuccess()
     func showError(message: String)
 }
 
@@ -46,7 +46,8 @@ class LoginViewModel: LoginProtocols {
             SVProgressHUD.dismiss()
             switch response {
             case .success(let result): print("here is the user object",result.data)
-            self.delegate?.showSuccess(message: "Login successfully.")
+            self.coordinator.store(user: result.data)
+            self.delegate?.onSuccess()
             case .failure(let error): print(error.localizedDescription)
             self.delegate?.showError(message: error.localizedDescription)
             }

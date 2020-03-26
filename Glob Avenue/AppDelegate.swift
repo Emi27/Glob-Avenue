@@ -35,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func setProgressStyle() {
         SVProgressHUD.setDefaultStyle(.dark)
+        SVProgressHUD.setDefaultMaskType(.gradient)
+        SVProgressHUD.setDefaultAnimationType(.native)
     }
     
 }

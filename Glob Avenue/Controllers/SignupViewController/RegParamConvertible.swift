@@ -22,13 +22,29 @@ struct RegParamConvertible {
     var logoUrl: String = ""
     var presentationUrl: String = ""
 
-    var values = ["role": "1", "device_type": "ios", "device_id": "rhkehr8372yrhiedf"] as [String: Any]
+    var values = ["device_type": "ios", "device_id": "rhkehr8372yrhiedf"] as [String: Any]
     
     
     var normalParam: ParamDictionary {
-        let updated = values.merging(["email": email, "username": username,
+        let updated = values.merging(["role": "1", "email": email, "username": username,
                                       "password": password, "conf_password": confPassword,
                                       "phone": phone, "location": location]) {_,_ in }
+        return ParamDictionary(updated)
+    }
+    
+    var professionalParam: ParamDictionary {
+        var updated = values.merging(["role": "2", "email": email, "username": username,
+                                      "password": password, "conf_password": confPassword,
+                                      "phone": phone, "address": address, "contact_name": contactName,
+                                      "zip_code": zipCode]) {_,_ in }
+        if presentationUrl != "" {
+            updated = updated.merging(["presentation_url": "data:video/mp4;base64," + presentationUrl]) {_,_ in}
+        }
+
+        if logoUrl != "" {
+            updated = updated.merging(["logo_url": logoUrl]) {_,_ in}
+        }
+
         return ParamDictionary(updated)
     }
 }

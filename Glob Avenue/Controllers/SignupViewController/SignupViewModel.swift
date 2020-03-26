@@ -45,6 +45,7 @@ class SignupViewModel: SignupProtocols {
         let values = RegParamConvertible(username: userName, email: email, password: password,
                                          phone: mobile, confPassword: confPassword,
                                          location: location).normalParam
+        print(values.value)
         coordinator.doSignup(containerType: User.self, values: values) { (response) in
             SVProgressHUD.dismiss()
             switch response {

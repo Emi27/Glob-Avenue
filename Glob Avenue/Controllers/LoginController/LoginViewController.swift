@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
     lazy var usernameField: HighlightingTextField = {
         let textField = HighlightingTextField(frame: .zero)
         textField.title = "Email"
+        textField.text = "imran324@gmail.com"
         textField.placeholder = "xyz@mail.com"
         textField.delegate = self
         textField.keyboardType = .emailAddress
@@ -36,6 +37,7 @@ class LoginViewController: UIViewController {
     lazy var passwordField: HighlightingTextField = {
         let textField = HighlightingTextField(frame: .zero)
         textField.title = "Password"
+        textField.text = "123456"
         textField.placeholder = "******"
         textField.delegate = self
         textField.isSecureTextEntry = true
@@ -84,11 +86,16 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         title = " "
         view.backgroundColor = .white
+        setup()
+    }
+    
+    private func setup() {
         addImageView()
         addFields()
         addSignUpButton()
         addSubmitButton()
         addForgotPassword()
+        viewModel.delegate = self
     }
 
     private func addImageView() {
@@ -226,5 +233,15 @@ extension LoginViewController: UITextFieldDelegate {
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.view.layoutIfNeeded()
+    }
+}
+
+extension LoginViewController: LoginUiDelegates {
+    func onSuccess() {
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+
+    func showError(message: String) {
+        showFailBanner(message: message)
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 
 protocol MainSectionCoordinator {
     var initialController: UIViewController? { get }
+    var defaultTabController: DefaultTabCoordinator? { get }
 
     // MARK: Auth
     func showLogin()
@@ -21,4 +22,6 @@ protocol MainSectionCoordinator {
     func showProfessionalSignup()
     
     func showForgotPassword()
+    func forgotPassword<T: Decodable>(containerType: T.Type, values: ParameterConvertible, completion: @escaping Completion<T>)
+    func store(user: User)
 }
