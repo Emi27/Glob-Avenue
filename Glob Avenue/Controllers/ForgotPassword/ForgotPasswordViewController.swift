@@ -46,6 +46,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         view.backgroundColor = .white
         addLogo()
         addUiElements()
+        viewModel.delegate = self
     }
 
     private func addLogo() {
@@ -77,19 +78,22 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
         }
         loginButton.addTarget(self, action: #selector(loginClicked), for: .touchUpInside)
     }
-    
+
     @objc
     func loginClicked() {
-        
+        guard let email = usernameField.text else {
+            return
+        }
+        viewModel.doForgot(email: email)
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+}
+
+extension ForgotPasswordViewController: ForgotUIDelegate {
+    func showError(message: String) {
+        showFailBanner(message: message)
+    }
+
+    func showSuccess(message: String) {
+        showSuccessBanner(message: message)
+    }
 }

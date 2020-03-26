@@ -16,7 +16,7 @@ extension DefaultTabCoordinator {
         present(controller: loginController, animated: false, embeddInNav: true, fullScreen: true)
     }
 
-    func doLogin<T>(containerType: T.Type, values: ParameterConvertible, completion: @escaping ((Result<APIResponse<T>, Error>) -> Void)) where T : Decodable, T : Encodable {
+    func doLogin<T>(containerType: T.Type, values: ParameterConvertible, completion: @escaping ((Result<APIResponse<T>, GlobError>) -> Void)) where T : Decodable, T : Encodable {
         api.request(containerType: containerType, method: .post, values: values, path: "login", completion: completion)
     }
 }
@@ -44,5 +44,9 @@ extension DefaultTabCoordinator {
         let viewModel = ForgotPasswordViewModel(coordinator: self)
         let controller = ForgotPasswordViewController(viewModel: viewModel)
         displayContent(controller)
+    }
+    
+    func forgotPassword<T: Decodable>(containerType: T.Type, values: ParameterConvertible, completion: @escaping Completion<T>) {
+        api.request(containerType: containerType, values: values, path: "forgotPassword", method: .post, completion: completion)
     }
 }

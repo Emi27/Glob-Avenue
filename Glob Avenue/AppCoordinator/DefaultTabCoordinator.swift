@@ -14,20 +14,40 @@ class DefaultTabCoordinator: UITabBarController, MainSectionCoordinator {
         return self
     }
 
+    var defaultTabController: DefaultTabCoordinator? {
+        return self
+    }
+
     var currentNavController: AppNavigator?
     let api: NetworkLayer
-    
+
+    var isLoggedIn: Bool {
+        return currentUser != nil
+    }
+
     init(api: NetworkLayer = NetworkLayer()) {
         self.api = api
         super.init(nibName: nil, bundle: nil)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
+    override func viewDidLoad() {
+        view.backgroundColor = .red
+    }
+
     override func viewDidAppear(_ animated: Bool) {
-        showLogin()
+        if !isLoggedIn { showLogin() }
+    }
+
+    func store(user: User) {
+        self.currentUser = user
+    }
+
+    func deleteCurrentUser() {
+        self.currentUser = nil
     }
 }
 

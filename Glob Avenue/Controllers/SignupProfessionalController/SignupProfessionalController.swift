@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SignupProfessionalController: UIViewController, StoryboardRepresentable {
 
     var viewModel: SignupProfessionalViewModel!
     var imagePicker: ImagePicker!
-
+    @IBOutlet weak var previewImage: UIImageView!
+    @IBOutlet weak var previewVideo: UIImageView!
+    
     // MARK: - Account Details Outlets
     @IBOutlet weak var userNameField: HighlightingTextField! {
         didSet {
@@ -49,7 +52,6 @@ class SignupProfessionalController: UIViewController, StoryboardRepresentable {
             companyNameField.title = "Contact name"
             companyNameField.placeholder = "Leonardo Oliveira"
             companyNameField.delegate = self
-            companyNameField.isRequired = true
         }
     }
 
@@ -69,7 +71,6 @@ class SignupProfessionalController: UIViewController, StoryboardRepresentable {
             companyPhoneField.placeholder = "466-706-3114"
             companyPhoneField.delegate = self
             companyPhoneField.keyboardType = .phonePad
-            companyPhoneField.isRequired = true
         }
     }
 
@@ -78,7 +79,6 @@ class SignupProfessionalController: UIViewController, StoryboardRepresentable {
             companyAddressField.title = "Address"
             companyAddressField.placeholder = "168 Lamont Shores Suite 571"
             companyAddressField.delegate = self
-            companyAddressField.isRequired = true
         }
     }
 
@@ -88,7 +88,6 @@ class SignupProfessionalController: UIViewController, StoryboardRepresentable {
             companyZipField.placeholder = "12507"
             companyZipField.delegate = self
             companyZipField.keyboardType = .phonePad
-            companyZipField.isRequired = true
         }
     }
 
@@ -106,12 +105,69 @@ class SignupProfessionalController: UIViewController, StoryboardRepresentable {
         self.imagePicker.present(from: sender, mediaType: .video)
     }
     
+    func checkValidityOfFields() -> Bool {
+        resetAllError()
+        var isAllValid = false
+        switch viewModel.validateFields() {
+        case .userName(let message): userNameField.error = message
+        case .password(let message): passwordField.error = message
+        case .confPassword(let message): confirmPasswordField.error = message
+        case .passwordNotMatch(let message):
+            passwordField.error = message
+            confirmPasswordField.error = message
+        case .email(let message): companyEmailField.error = message
+        case .none: isAllValid = true
+        }
+        return isAllValid
+    }
+    
+    func resetAllError() {
+        [userNameField, passwordField, confirmPasswordField, companyEmailField].forEach {
+            $0.error = nil
+        }
+    }
+    
+    @IBAction func editingChnaged(_ sender: HighlightingTextField) {
+        guard let text = sender.text else {
+            return
+        }
+        switch sender {
+        case userNameField: viewModel.updateUserName(text: text)
+        case passwordField: viewModel.updatePassword(text: text)
+        case confirmPasswordField: viewModel.updateConfPassword(text: text)
+        case companyNameField: viewModel.updateCompanyName(text: text)
+        case companyEmailField: viewModel.updateEmail(text: text)
+        case companyPhoneField: viewModel.updateMobile(text: text)
+        case companyAddressField: viewModel.updateAddress(text: text)
+        case companyZipField: viewModel.updateZip(text: text)
+        default: break
+        }
+    }
+    
+    @IBAction func signUp(_ sender: Any) {
+        if checkValidityOfFields() {
+            viewModel.doSignUp()
+        }
+    }
+    
 }
 
 extension SignupProfessionalController: ImagePickerDelegate {
 
     func didSelect(image: UIImage?) {
-        //self.imageView.image = image
+        DispatchQueue.main.async {
+            self.previewImage.image = image
+            self.viewModel.logoString = image?.base64 ?? ""
+        }
+    }
+
+    func didSelect(video: URL?) {
+        if let path = video {
+            DispatchQueue.main.async {
+                self.previewVideo.image = path.thumbnail
+                self.viewModel.presentationUrl = path
+            }
+        }
     }
 }
 

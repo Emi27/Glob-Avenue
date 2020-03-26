@@ -17,6 +17,7 @@
 		A50C1E05240435450096BA6C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C1E04240435450096BA6C /* LoginViewModel.swift */; };
 		A50C1E07240436A70096BA6C /* Navigation+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C1E06240436A70096BA6C /* Navigation+Extenstions.swift */; };
 		A50C1E092404378B0096BA6C /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C1E082404378B0096BA6C /* SignupViewModel.swift */; };
+		A5135BD7242B804A0077BF0B /* DefaultTabCoordinator+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5135BD6242B804A0077BF0B /* DefaultTabCoordinator+User.swift */; };
 		A526D5362408329D0066BFD6 /* Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526D5352408329D0066BFD6 /* Margin.swift */; };
 		A526D538240834330066BFD6 /* SignupExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526D537240834330066BFD6 /* SignupExtension.swift */; };
 		A526D53A24083D640066BFD6 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A526D53924083D640066BFD6 /* UIDevice.swift */; };
@@ -64,6 +65,7 @@
 		A5C4E43923F81309005A7FBF /* MainSectionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C4E43823F81309005A7FBF /* MainSectionCoordinator.swift */; };
 		A5C4E43D23F81380005A7FBF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C4E43C23F81380005A7FBF /* LoginViewController.swift */; };
 		A5D22FD023F85B32001ACC66 /* HighlightingTextEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D22FCF23F85B32001ACC66 /* HighlightingTextEntry.swift */; };
+		A5DDF4802415179D00D2321E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DDF47F2415179D00D2321E /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,7 @@
 		A50C1E04240435450096BA6C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A50C1E06240436A70096BA6C /* Navigation+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigation+Extenstions.swift"; sourceTree = "<group>"; };
 		A50C1E082404378B0096BA6C /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		A5135BD6242B804A0077BF0B /* DefaultTabCoordinator+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultTabCoordinator+User.swift"; sourceTree = "<group>"; };
 		A526D5352408329D0066BFD6 /* Margin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Margin.swift; sourceTree = "<group>"; };
 		A526D537240834330066BFD6 /* SignupExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupExtension.swift; sourceTree = "<group>"; };
 		A526D53924083D640066BFD6 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
@@ -127,6 +130,7 @@
 		A5C4E43823F81309005A7FBF /* MainSectionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainSectionCoordinator.swift; path = ../MainSectionCoordinator.swift; sourceTree = "<group>"; };
 		A5C4E43C23F81380005A7FBF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5D22FCF23F85B32001ACC66 /* HighlightingTextEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighlightingTextEntry.swift; sourceTree = "<group>"; };
+		A5DDF47F2415179D00D2321E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C60085A78C6A5F01C14A0048 /* Pods-Glob Avenue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glob Avenue.release.xcconfig"; path = "Target Support Files/Pods-Glob Avenue/Pods-Glob Avenue.release.xcconfig"; sourceTree = "<group>"; };
 		D2CCD3942414D9AB83293405 /* Pods-Glob Avenue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glob Avenue.debug.xcconfig"; path = "Target Support Files/Pods-Glob Avenue/Pods-Glob Avenue.debug.xcconfig"; sourceTree = "<group>"; };
 		EF740576D516932A90BB55C7 /* Pods-Globe Avenue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Globe Avenue.debug.xcconfig"; path = "Target Support Files/Pods-Globe Avenue/Pods-Globe Avenue.debug.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 				A599381C240983210066F3C2 /* ImagePicker.swift */,
 				A52FD58D24101C4D00561F97 /* StringExtensions.swift */,
 				A52FD5912410290A00561F97 /* DictionaryExtionsions.swift */,
+				A5DDF47F2415179D00D2321E /* Extensions.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 				A50C1DFF2404341C0096BA6C /* AppNavigator */,
 				A50C1DFC240431C00096BA6C /* SectionsCoordinator */,
 				A50C1DFA240431840096BA6C /* DefaultTabCoordinator.swift */,
+				A5135BD6242B804A0077BF0B /* DefaultTabCoordinator+User.swift */,
 			);
 			path = AppCoordinator;
 			sourceTree = "<group>";
@@ -519,6 +525,7 @@
 				A5C4E43D23F81380005A7FBF /* LoginViewController.swift in Sources */,
 				A53636392411681D0096CBE3 /* UIViewControllerExtensions.swift in Sources */,
 				A5A7D47E240A4B79002A86C4 /* NetworkLayer.swift in Sources */,
+				A5DDF4802415179D00D2321E /* Extensions.swift in Sources */,
 				A5A7D482240A52A9002A86C4 /* GlobError.swift in Sources */,
 				A526D5362408329D0066BFD6 /* Margin.swift in Sources */,
 				A599381D240983210066F3C2 /* ImagePicker.swift in Sources */,
@@ -529,6 +536,7 @@
 				A50A97B1240EBE25001057EB /* APIResponse.swift in Sources */,
 				A50C1E092404378B0096BA6C /* SignupViewModel.swift in Sources */,
 				A54DE34423FC3A8D002F9D73 /* Bundle+Extenstions.swift in Sources */,
+				A5135BD7242B804A0077BF0B /* DefaultTabCoordinator+User.swift in Sources */,
 				A5C4E43923F81309005A7FBF /* MainSectionCoordinator.swift in Sources */,
 				A5C4E42423F81193005A7FBF /* AppDelegate.swift in Sources */,
 				A50C1DFB240431840096BA6C /* DefaultTabCoordinator.swift in Sources */,

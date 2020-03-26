@@ -10,12 +10,12 @@ import UIKit
 
 public struct APIResponse<T: Codable>: GlobCodable {
     public let data: T
-    private let status: Bool?
+    private let status: Int?
     public let msg: String?
 
-    public init(data: T, msg: String, status: Bool) {
-        self.data = data
-        self.msg = msg
-        self.status = status
-    }
+//    public init(data: T, msg: String, status: Int) {
+//        self.data = data
+//        self.msg = msg
+//        self.status = status
+//    }
 }
