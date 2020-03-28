@@ -9,14 +9,6 @@
 import UIKit
 import Alamofire
 
-public typealias Completion<T> = ((Result<T, GlobError>) -> Void)
-public typealias ReqMethod = HTTPMethod
-
-protocol NetworkProtocol {
-    func request<T: Decodable>(containerType: T.Type, method: ReqMethod, values: ParameterConvertible?, path: String, completion: @escaping Completion<APIResponse<T>>)
-    func request<T: Decodable>(containerType: T.Type, values: ParameterConvertible?, path: String, method: ReqMethod, completion: @escaping Completion<T>)
-}
-
 class NetworkLayer: NetworkProtocol {
     
     let base = "https://globe-admin.herokuapp.com/api/"
@@ -69,11 +61,13 @@ class NetworkLayer: NetworkProtocol {
         }
     }
 
+    // MARK: - Helpers
     private func createDataRequest(path: String,
                                    method: ReqMethod,
                                    value: ParameterConvertible?) -> DataRequest? {
         guard let value = value?.value else {
-            return nil
+            return AF.request(base + path, method: method, parameters: nil,
+            encoding: URLEncoding.httpBody, headers: nil)
         }
         return AF.request(base + path, method: method, parameters: value,
                           encoding: URLEncoding.httpBody, headers: nil)

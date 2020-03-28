@@ -49,6 +49,23 @@
 		A54DB0E124082F3C002F9081 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54DB0E024082F3C002F9081 /* UIFontExtensions.swift */; };
 		A54DE34123FC3802002F9D73 /* globeLogo.gif in Resources */ = {isa = PBXBuildFile; fileRef = A54DE34023FC3802002F9D73 /* globeLogo.gif */; };
 		A54DE34423FC3A8D002F9D73 /* Bundle+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54DE34323FC3A8D002F9D73 /* Bundle+Extenstions.swift */; };
+		A55AF61B242E1F570053B6D3 /* Automobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55AF61A242E1F570053B6D3 /* Automobile.swift */; };
+		A55AF61D242E20130053B6D3 /* DefaultTabCoordinator+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55AF61C242E20130053B6D3 /* DefaultTabCoordinator+Home.swift */; };
+		A55AF61F242E20560053B6D3 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55AF61E242E20560053B6D3 /* NetworkProtocol.swift */; };
+		A55AF626242E2D6E0053B6D3 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55AF625242E2D6E0053B6D3 /* CategoryCell.swift */; };
+		A55AF628242E2E8F0053B6D3 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55AF627242E2E8F0053B6D3 /* Reusable.swift */; };
+		A5661102242D190600E19C65 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5661101242D190600E19C65 /* HomeViewController.swift */; };
+		A5661105242D198D00E19C65 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5661104242D198D00E19C65 /* FavouritesViewController.swift */; };
+		A5661108242D19A500E19C65 /* PostAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5661107242D19A500E19C65 /* PostAdViewController.swift */; };
+		A566110B242D19BE00E19C65 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A566110A242D19BE00E19C65 /* ChatsViewController.swift */; };
+		A566110E242D19D300E19C65 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A566110D242D19D300E19C65 /* ProfileViewController.swift */; };
+		A5661110242D19EB00E19C65 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A566110F242D19EB00E19C65 /* HomeViewModel.swift */; };
+		A5661112242D1A0600E19C65 /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5661111242D1A0600E19C65 /* FavouritesViewModel.swift */; };
+		A5661114242D1A1A00E19C65 /* PostAdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5661113242D1A1A00E19C65 /* PostAdViewModel.swift */; };
+		A5661116242D1A3400E19C65 /* ChatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5661115242D1A3400E19C65 /* ChatsViewModel.swift */; };
+		A5661118242D1A4B00E19C65 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5661117242D1A4B00E19C65 /* ProfileViewModel.swift */; };
+		A566111A242D1CC600E19C65 /* TabIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5661119242D1CC600E19C65 /* TabIcons.swift */; };
+		A574D507242F3B09007D2A2A /* ScrollableMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A574D506242F3B09007D2A2A /* ScrollableMenu.swift */; };
 		A5814FCA2406D7F000E93CB2 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5814FC92406D7EF00E93CB2 /* UIColorExtensions.swift */; };
 		A599381B24096EE60066F3C2 /* SignupProfessionalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A599381A24096EE60066F3C2 /* SignupProfessionalViewModel.swift */; };
 		A599381D240983210066F3C2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A599381C240983210066F3C2 /* ImagePicker.swift */; };
@@ -112,6 +129,23 @@
 		A54DB0E024082F3C002F9081 /* UIFontExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		A54DE34023FC3802002F9D73 /* globeLogo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = globeLogo.gif; sourceTree = "<group>"; };
 		A54DE34323FC3A8D002F9D73 /* Bundle+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extenstions.swift"; sourceTree = "<group>"; };
+		A55AF61A242E1F570053B6D3 /* Automobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Automobile.swift; sourceTree = "<group>"; };
+		A55AF61C242E20130053B6D3 /* DefaultTabCoordinator+Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultTabCoordinator+Home.swift"; sourceTree = "<group>"; };
+		A55AF61E242E20560053B6D3 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		A55AF625242E2D6E0053B6D3 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		A55AF627242E2E8F0053B6D3 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		A5661101242D190600E19C65 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A5661104242D198D00E19C65 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		A5661107242D19A500E19C65 /* PostAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAdViewController.swift; sourceTree = "<group>"; };
+		A566110A242D19BE00E19C65 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
+		A566110D242D19D300E19C65 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A566110F242D19EB00E19C65 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A5661111242D1A0600E19C65 /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
+		A5661113242D1A1A00E19C65 /* PostAdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAdViewModel.swift; sourceTree = "<group>"; };
+		A5661115242D1A3400E19C65 /* ChatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewModel.swift; sourceTree = "<group>"; };
+		A5661117242D1A4B00E19C65 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		A5661119242D1CC600E19C65 /* TabIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabIcons.swift; sourceTree = "<group>"; };
+		A574D506242F3B09007D2A2A /* ScrollableMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableMenu.swift; sourceTree = "<group>"; };
 		A5814FC92406D7EF00E93CB2 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		A599381A24096EE60066F3C2 /* SignupProfessionalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProfessionalViewModel.swift; sourceTree = "<group>"; };
 		A599381C240983210066F3C2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -183,6 +217,7 @@
 			children = (
 				A5C4E43823F81309005A7FBF /* MainSectionCoordinator.swift */,
 				A50C1E02240434B20096BA6C /* DefaultTabCoordinator+Auth.swift */,
+				A55AF61C242E20130053B6D3 /* DefaultTabCoordinator+Home.swift */,
 			);
 			path = SectionsCoordinator;
 			sourceTree = "<group>";
@@ -253,14 +288,101 @@
 				A52FD58D24101C4D00561F97 /* StringExtensions.swift */,
 				A52FD5912410290A00561F97 /* DictionaryExtionsions.swift */,
 				A5DDF47F2415179D00D2321E /* Extensions.swift */,
+				A5661119242D1CC600E19C65 /* TabIcons.swift */,
+				A55AF627242E2E8F0053B6D3 /* Reusable.swift */,
 			);
 			path = Global;
+			sourceTree = "<group>";
+		};
+		A55AF624242E2D6E0053B6D3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A55AF625242E2D6E0053B6D3 /* CategoryCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A56610FD242D18C700E19C65 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				A5AA1AAB240C0DF4007A879F /* ForgotPassword */,
+				A526D53B240843CB0066BFD6 /* SignupProfessionalController */,
+				A50C1DF5240429AA0096BA6C /* SignupViewController */,
+				A5C4E43B23F81366005A7FBF /* LoginController */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		A56610FE242D18D300E19C65 /* AppSections */ = {
+			isa = PBXGroup;
+			children = (
+				A56610FF242D18DD00E19C65 /* Home */,
+			);
+			path = AppSections;
+			sourceTree = "<group>";
+		};
+		A56610FF242D18DD00E19C65 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A566110C242D19C500E19C65 /* ProfileView */,
+				A5661109242D19AA00E19C65 /* ChatsView */,
+				A5661106242D199200E19C65 /* PostAdView */,
+				A5661103242D196D00E19C65 /* FavouritesView */,
+				A5661100242D18ED00E19C65 /* HomeView */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A5661100242D18ED00E19C65 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				A5661101242D190600E19C65 /* HomeViewController.swift */,
+				A566110F242D19EB00E19C65 /* HomeViewModel.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		A5661103242D196D00E19C65 /* FavouritesView */ = {
+			isa = PBXGroup;
+			children = (
+				A5661104242D198D00E19C65 /* FavouritesViewController.swift */,
+				A5661111242D1A0600E19C65 /* FavouritesViewModel.swift */,
+			);
+			path = FavouritesView;
+			sourceTree = "<group>";
+		};
+		A5661106242D199200E19C65 /* PostAdView */ = {
+			isa = PBXGroup;
+			children = (
+				A5661107242D19A500E19C65 /* PostAdViewController.swift */,
+				A5661113242D1A1A00E19C65 /* PostAdViewModel.swift */,
+			);
+			path = PostAdView;
+			sourceTree = "<group>";
+		};
+		A5661109242D19AA00E19C65 /* ChatsView */ = {
+			isa = PBXGroup;
+			children = (
+				A566110A242D19BE00E19C65 /* ChatsViewController.swift */,
+				A5661115242D1A3400E19C65 /* ChatsViewModel.swift */,
+			);
+			path = ChatsView;
+			sourceTree = "<group>";
+		};
+		A566110C242D19C500E19C65 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				A566110D242D19D300E19C65 /* ProfileViewController.swift */,
+				A5661117242D1A4B00E19C65 /* ProfileViewModel.swift */,
+			);
+			path = ProfileView;
 			sourceTree = "<group>";
 		};
 		A5A7D478240A47D8002A86C4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				A5A7D47D240A4B79002A86C4 /* NetworkLayer.swift */,
+				A55AF61E242E20560053B6D3 /* NetworkProtocol.swift */,
 				A5A7D47F240A4F5B002A86C4 /* Parameters.swift */,
 				A50A97B0240EBE25001057EB /* APIResponse.swift */,
 				A5A7D481240A52A9002A86C4 /* GlobError.swift */,
@@ -272,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				A5A7D485240A5662002A86C4 /* User.swift */,
+				A55AF61A242E1F570053B6D3 /* Automobile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -337,10 +460,8 @@
 		A5C4E43A23F8135C005A7FBF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A5AA1AAB240C0DF4007A879F /* ForgotPassword */,
-				A526D53B240843CB0066BFD6 /* SignupProfessionalController */,
-				A50C1DF5240429AA0096BA6C /* SignupViewController */,
-				A5C4E43B23F81366005A7FBF /* LoginController */,
+				A56610FE242D18D300E19C65 /* AppSections */,
+				A56610FD242D18C700E19C65 /* Auth */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -357,6 +478,7 @@
 		A5D22FCD23F85B1C001ACC66 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A55AF624242E2D6E0053B6D3 /* Cells */,
 				A5D22FCE23F85B24001ACC66 /* UI Components */,
 			);
 			path = Views;
@@ -365,6 +487,7 @@
 		A5D22FCE23F85B24001ACC66 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				A574D506242F3B09007D2A2A /* ScrollableMenu.swift */,
 				A5D22FCF23F85B32001ACC66 /* HighlightingTextEntry.swift */,
 				A50C1DF824042A730096BA6C /* AppLogoView.swift */,
 			);
@@ -507,16 +630,22 @@
 			files = (
 				A52FD5902410248000561F97 /* RegParamConvertible.swift in Sources */,
 				A5A7D480240A4F5B002A86C4 /* Parameters.swift in Sources */,
+				A55AF61F242E20560053B6D3 /* NetworkProtocol.swift in Sources */,
 				A50C1DF924042A730096BA6C /* AppLogoView.swift in Sources */,
+				A5661114242D1A1A00E19C65 /* PostAdViewModel.swift in Sources */,
+				A5661102242D190600E19C65 /* HomeViewController.swift in Sources */,
 				A526D53A24083D640066BFD6 /* UIDevice.swift in Sources */,
 				A5814FCA2406D7F000E93CB2 /* UIColorExtensions.swift in Sources */,
 				A526D541240844A10066BFD6 /* StoryboardRepresentable.swift in Sources */,
 				A5A7D486240A5662002A86C4 /* User.swift in Sources */,
 				A52FD5922410290A00561F97 /* DictionaryExtionsions.swift in Sources */,
 				A50C1DF7240429CB0096BA6C /* SignupViewController.swift in Sources */,
+				A5661108242D19A500E19C65 /* PostAdViewController.swift in Sources */,
 				A54DB0DF24082EDB002F9081 /* TextStyleConfiguring.swift in Sources */,
 				A5AA1AAD240C0E0F007A879F /* ForgotPasswordViewController.swift in Sources */,
 				A50C1E05240435450096BA6C /* LoginViewModel.swift in Sources */,
+				A5661116242D1A3400E19C65 /* ChatsViewModel.swift in Sources */,
+				A55AF626242E2D6E0053B6D3 /* CategoryCell.swift in Sources */,
 				A526D538240834330066BFD6 /* SignupExtension.swift in Sources */,
 				A50C1E012404343B0096BA6C /* AppNavigator.swift in Sources */,
 				A526D53D240843F30066BFD6 /* SignupProfessionalController.swift in Sources */,
@@ -525,19 +654,30 @@
 				A5C4E43D23F81380005A7FBF /* LoginViewController.swift in Sources */,
 				A53636392411681D0096CBE3 /* UIViewControllerExtensions.swift in Sources */,
 				A5A7D47E240A4B79002A86C4 /* NetworkLayer.swift in Sources */,
+				A566110B242D19BE00E19C65 /* ChatsViewController.swift in Sources */,
 				A5DDF4802415179D00D2321E /* Extensions.swift in Sources */,
+				A5661112242D1A0600E19C65 /* FavouritesViewModel.swift in Sources */,
 				A5A7D482240A52A9002A86C4 /* GlobError.swift in Sources */,
 				A526D5362408329D0066BFD6 /* Margin.swift in Sources */,
+				A566111A242D1CC600E19C65 /* TabIcons.swift in Sources */,
+				A55AF628242E2E8F0053B6D3 /* Reusable.swift in Sources */,
+				A5661105242D198D00E19C65 /* FavouritesViewController.swift in Sources */,
 				A599381D240983210066F3C2 /* ImagePicker.swift in Sources */,
 				A50C1E03240434B20096BA6C /* DefaultTabCoordinator+Auth.swift in Sources */,
 				A50C1E07240436A70096BA6C /* Navigation+Extenstions.swift in Sources */,
 				A599381B24096EE60066F3C2 /* SignupProfessionalViewModel.swift in Sources */,
 				A52FD58E24101C4D00561F97 /* StringExtensions.swift in Sources */,
 				A50A97B1240EBE25001057EB /* APIResponse.swift in Sources */,
+				A55AF61D242E20130053B6D3 /* DefaultTabCoordinator+Home.swift in Sources */,
 				A50C1E092404378B0096BA6C /* SignupViewModel.swift in Sources */,
+				A574D507242F3B09007D2A2A /* ScrollableMenu.swift in Sources */,
 				A54DE34423FC3A8D002F9D73 /* Bundle+Extenstions.swift in Sources */,
+				A5661118242D1A4B00E19C65 /* ProfileViewModel.swift in Sources */,
 				A5135BD7242B804A0077BF0B /* DefaultTabCoordinator+User.swift in Sources */,
+				A566110E242D19D300E19C65 /* ProfileViewController.swift in Sources */,
+				A5661110242D19EB00E19C65 /* HomeViewModel.swift in Sources */,
 				A5C4E43923F81309005A7FBF /* MainSectionCoordinator.swift in Sources */,
+				A55AF61B242E1F570053B6D3 /* Automobile.swift in Sources */,
 				A5C4E42423F81193005A7FBF /* AppDelegate.swift in Sources */,
 				A50C1DFB240431840096BA6C /* DefaultTabCoordinator.swift in Sources */,
 				A5D22FD023F85B32001ACC66 /* HighlightingTextEntry.swift in Sources */,

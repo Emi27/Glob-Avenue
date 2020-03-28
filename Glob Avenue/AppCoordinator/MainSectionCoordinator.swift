@@ -24,4 +24,8 @@ protocol MainSectionCoordinator {
     func showForgotPassword()
     func forgotPassword<T: Decodable>(containerType: T.Type, values: ParameterConvertible, completion: @escaping Completion<T>)
     func store(user: User)
+    
+    
+    // MARK: Home
+    func fetch<T: Decodable>(containerType: T.Type, completion: @escaping Completion<APIResponse<T>>)
 }
